@@ -14,8 +14,8 @@ export default [
       },
       {
         path: "/home2",
-        name: "首页",
-        component: "./Home",
+        name: "首页2",
+        component: "./Home2",
       },
     ],
   },
