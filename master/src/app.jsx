@@ -184,3 +184,13 @@ export const request = {
   paramsSerializer: (params) => stringify(params, { indices: false }),
   // timeout: 3000,
 };
+
+// src/app.ts
+export const qiankun = {
+  apps: [
+    {
+      name: 'slave',
+      entry: '//localhost:5555',
+    },
+  ],
+};

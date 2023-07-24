@@ -31,6 +31,9 @@ export default defineConfig({
   },
   routes,
   proxy: proxy[REACT_APP_ENV || 'dev'],
+  qiankun: {
+    slave: {},
+  },
   // headScripts: [`https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js`, 'https://webapi.amap.com/maps?v=1.4.15&key=0380bbef978f6153d7319110d9b21a72'],
   // links: [{ href: 'https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css', rel: 'stylesheet' }],
 });

@@ -130,9 +130,10 @@ export default defineConfig({
       projectName: 'swagger',
     },
   ],
-  mfsu: {
-    exclude: ['@playwright/test'],
-  },
+  // mfsu: {
+  //   exclude: ['@playwright/test'],
+  // },
+  mfsu: false,
   headScripts: [
     `window.routerBase='${PUBLICK_PATH}'`,
     `window.projectKey='${defaultSettings.projectKey}'`,
@@ -142,4 +143,7 @@ export default defineConfig({
   publicPath: PUBLICK_PATH,
   base: PUBLICK_PATH,
   historyWithQuery: {},
+  qiankun: {
+    master: {},
+  },
 });
