@@ -1,1 +1,0 @@
-export const INITNUM = -1;
