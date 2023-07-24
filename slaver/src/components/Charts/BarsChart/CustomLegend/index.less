@@ -1,0 +1,50 @@
+.customLegend {
+
+    &, .horizontal{
+        flex-wrap: wrap;
+        margin-left: calc(var(--gap) * -1);
+        .customLegendItem{
+            display: flex;
+            padding-left:var(--gap);
+            white-space: nowrap;
+        }
+    
+    }
+   
+    &, .vertical{
+        flex-wrap: wrap;
+        margin-top: calc(var(--gap) * -1);
+        .customLegendItem{
+            display: flex;
+            padding-top:var(--gap);
+            white-space: nowrap;
+        }
+    
+    }
+}
+
+
+// icon style
+.customLegendIcon{
+    align-self: center;
+}
+.customLegendIcon--circle{
+    border-radius: 50%;
+}
+.customLegendIcon--roundrect{
+    border-radius: 20%;
+}
+.customLegendIcon--diamond{
+    clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+}
+.customLegendIcon--triangle{
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+}
+.customLegendIcon--arrow{
+    clip-path: polygon(50% 0%, 100% 100%, 50% 60%, 0 100%);
+
+}
+
+.customLegendIcon--img{
+    background-size: 100% 100%;
+}

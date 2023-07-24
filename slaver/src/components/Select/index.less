@@ -1,0 +1,42 @@
+.selectWrap {
+  position: relative;
+  font-weight: 500;
+  font-size: 0.14rem;
+  font-family: 'Oxanium';
+  user-select: none;
+  .selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 0.22rem;
+    padding: 0 0.06rem;
+    color: #77E4E4;
+    line-height: 0.22rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #77E4E4;
+    border-radius: 0.04rem;
+    cursor: pointer;
+  }
+  .list {
+    position: absolute;
+    top: 0.22rem;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    max-height: 1.5rem;
+    overflow-y: auto;
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: 0.28rem;
+      padding: 0 0.06rem;
+      color: #FFF;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 1px rgba(205, 205, 205, 0.25);
+      cursor: pointer;
+    }
+  }
+}
