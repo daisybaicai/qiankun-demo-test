@@ -35,7 +35,7 @@ export default [
   {
     name: '微前端-内部Mi',
     icon: 'user',
-    path: '/slave2',
+    path: '/slave2/*',
     component: './Mirco',
   },
   {

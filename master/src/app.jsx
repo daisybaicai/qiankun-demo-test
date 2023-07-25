@@ -133,27 +133,27 @@ export const layout = ({
     },
     layoutBgImgList: [],
     links: [],
-    menuDataRender,
-    menuHeaderRender: undefined,
-    menuItemRender: (menuItemProps, defaultDom) => {
-      if (menuItemProps.targetUrl) {
-        return (
-          <a onClick={() => handleTargetJump(menuItemProps.targetUrl, menuItemProps.target)}>
-            {defaultDom}
-          </a>
-        );
-      }
-      if (menuItemProps.isUrl || !menuItemProps.path) {
-        return defaultDom;
-      }
-      // 支持二级菜单显示icon
-      return (
-        <Link to={menuItemProps.path}>
-          <SubMenuIcon showIcon={menuItemProps.showIcon} icon={menuItemProps.icon} />
-          {defaultDom}
-        </Link>
-      );
-    },
+    // menuDataRender,
+    // menuHeaderRender: undefined,
+    // menuItemRender: (menuItemProps, defaultDom) => {
+    //   if (menuItemProps.targetUrl) {
+    //     return (
+    //       <a onClick={() => handleTargetJump(menuItemProps.targetUrl, menuItemProps.target)}>
+    //         {defaultDom}
+    //       </a>
+    //     );
+    //   }
+    //   if (menuItemProps.isUrl || !menuItemProps.path) {
+    //     return defaultDom;
+    //   }
+    //   // 支持二级菜单显示icon
+    //   return (
+    //     <Link to={menuItemProps.path}>
+    //       <SubMenuIcon showIcon={menuItemProps.showIcon} icon={menuItemProps.icon} />
+    //       {defaultDom}
+    //     </Link>
+    //   );
+    // },
     // 自定义 403 页面
     // unAccessible: <div>unAccessible</div>,
     // 增加一个 loading 的状态

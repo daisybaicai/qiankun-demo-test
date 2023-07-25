@@ -6,7 +6,8 @@ import routeHistory from './routeHistory.js';
 import routes from './routes';
 
 const { REACT_APP_ENV, ENV } = process.env;
-const PUBLICK_PATH = '/admin/';
+const PUBLIC_PATH = '/admin/';
+const BASE_PATH = '/admin'
 export default defineConfig({
   mock: {},
   dva: {},
@@ -135,13 +136,13 @@ export default defineConfig({
   // },
   mfsu: false,
   headScripts: [
-    `window.routerBase='${PUBLICK_PATH}'`,
+    `window.routerBase='${PUBLIC_PATH}'`,
     `window.projectKey='${defaultSettings.projectKey}'`,
   ],
-  scripts: [routeHistory, `${PUBLICK_PATH}animate.min.css`],
+  scripts: [routeHistory, `${PUBLIC_PATH}animate.min.css`],
   metas: [{ name: 'google', content: 'notranslate' }],
-  publicPath: PUBLICK_PATH,
-  base: PUBLICK_PATH,
+  publicPath: PUBLIC_PATH,
+  base: BASE_PATH,
   historyWithQuery: {},
   qiankun: {
     master: {},
