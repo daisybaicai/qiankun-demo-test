@@ -11,6 +11,7 @@ import Logo from '@/assets/logo-title.svg';
 import { fetchProfile } from '@/services/api';
 import defaultSettings from '../config/defaultSettings';
 import { errorConfig } from './requestErrorConfig';
+import { useState } from 'react';
 
 // const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
@@ -191,6 +192,23 @@ export const qiankun = {
     {
       name: 'slave',
       entry: '//localhost:5555',
+      props: {
+        accountOnClick: (event) => console.log(event),
+        accountName: 'Alex',
+        accountAge: 21,
+      },
     },
   ],
 };
+
+// src/app.ts
+export function useQiankunStateForSlave() {
+  const [globalState, setGlobalState] = useState({
+    slogan: 'Hello MicroFrontend',
+  });
+ 
+  return {
+    globalState,
+    setGlobalState,
+  };
+}
