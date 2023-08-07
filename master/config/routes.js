@@ -45,6 +45,12 @@ export default [
     component: './Mirco/index2',
   },
   {
+    name: '微前端-主题调试',
+    icon: 'user',
+    path: '/theme',
+    component: './Mirco/Theme',
+  },
+  {
     path: '/account',
     name: '用户管理',
     icon: 'user',

@@ -1,19 +1,23 @@
-import React from "react";
-import { Link, useModel } from "umi";
+import React from 'react';
 import { Button, Divider, Space } from 'antd';
+import { PageContainer } from '@ant-design/pro-components';
+import { MicroAppWithMemoHistory } from '@umijs/max';
+// import CustomErrorBoundary from "@/components/CustomErrorBoundary";
 import styles from './index.less';
 
-export default function HomePage() {
-  const masterProps = useModel("@@qiankunStateFromMaster");
-  console.log('@@qiankunStateFromMaster', masterProps)
-  return (
-    <div>
-      <Link to="/home2">去首页2</Link>
-      <Space>
-          <Button type={'primary'}>子应用按钮1</Button>
-          <Button>子应用按钮2</Button>
-        </Space>
+const defaultParams = {
+//   settings: {
+//     sandbox: {
+//       experimentalStyleIsolation: true,
+//     },
+//   },
+};
 
+
+export default function Theme() {
+  return (
+    <PageContainer ghost title={'基于sandbox: {experimentalStyleIsolation: true}样式隔离'}>
+      <Divider />
 
       <h3>主应用(main)</h3>
       <div style={{ background: '#f0f0f0', padding: 24, display: 'flex', flexDirection: 'column' }}>
@@ -41,8 +45,10 @@ export default function HomePage() {
           </div>
         </Space>
       </div>
-      首页
-      <div>{JSON.stringify(masterProps?.globalState)}</div>
-    </div>
+      <Divider />
+      <h3>微应用(sub-app-1)</h3>
+      <MicroAppWithMemoHistory name="slave" url="/" base="/" />
+      <Divider />
+    </PageContainer>
   );
 }
